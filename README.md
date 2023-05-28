@@ -35,7 +35,7 @@ pip install urllib3==1.26.15
 
 
 
-## making app
+## learn how to use
 
 ~~~
 touch my_script.py
@@ -64,8 +64,104 @@ df
 
 Here is any example:https://docs.streamlit.io/library/get-started/main-concepts
 
+In this section, I tried mulitupy page.
+
+I made directly like below.
+
+~~~
+page1.py
+pages/
+ |-page2.py
+ |-page3.py
+~~~
+
+
+page1.py like below.
+
+~~~
+import streamlit as st
+from pages.page2 import cal
+
+st.markdown("# Main page 🎈")
+st.sidebar.markdown("# Main page 🎈")
+
+import streamlit as st
+import numpy as np
+import pandas as pd
+
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
+
+y=cal(10)
+y
+~~~
+
+page2.py like below.
+
+~~~
+import streamlit as st
+
+st.markdown("# page2 🎈")
+st.sidebar.markdown("# page2 🎈")
+
+import streamlit as st
+import numpy as np
+import pandas as pd
+
+
+def cal(x):
+    y=x**2
+    return y
+
+test=True
+
+if test:
+   if st.checkbox('Show dataframe'):
+      chart_data = pd.DataFrame(
+         np.random.randn(20, 3),
+         columns=['a', 'b', 'c'])
+
+      chart_data
+~~~
+
+page3.py like below.
+
+~~~
+import streamlit as st
+
+st.markdown("# page3 🎈")
+st.sidebar.markdown("# page3 🎈")
+
+import streamlit as st
+import pandas as pd
+
+
+test=True
+
+if test:
+    st.write("Here's our first attempt at using data to create a table:")
+    st.write(pd.DataFrame({
+        'first column': [1, 2, 3, 4],
+        'second column': [10, 20, 30, 40]
+    }))
+~~~
+
+
+I understand we can You can choose whether to display the page content（The table of contents is always displayed.）.
+
+
+##  App
+
+
+
+
 
 ### Tips
 python command collection:
 
 https://qiita.com/HyunwookPark/items/242a8ceea656416b6da8
+
+マークダウンからpythonコードを抜き出してsteramlintに突っ込むか？
