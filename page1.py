@@ -1,6 +1,7 @@
 import streamlit as st
 from pages.page2 import cal
 
+
 st.markdown("# Main page 🎈")
 st.sidebar.markdown("# Main page 🎈")
 
@@ -14,5 +15,6 @@ chart_data = pd.DataFrame(
 
 st.line_chart(chart_data)
 
-y=cal(10)
-y
+
+
+st.code(cal(), language='python')

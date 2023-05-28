@@ -150,10 +150,16 @@ if test:
 ~~~
 
 
-I understand we can You can choose whether to display the page content（The table of contents is always displayed.）.
+I understand we can choose whether to display the page content（The table of contents is always displayed.）.
 
 
-##  App
+##  try to making App
+
+I tried to making app which can get time where is another timezone.
+
+And I can another page which is written about "How to calculate".
+
+This page is modifed followed by fix function code.
 
 
 
@@ -163,5 +169,3 @@ I understand we can You can choose whether to display the page content（The tab
 python command collection:
 
 https://qiita.com/HyunwookPark/items/242a8ceea656416b6da8
-
-マークダウンからpythonコードを抜き出してsteramlintに突っ込むか？
